@@ -1,4 +1,4 @@
-# IFN666 -  Capstone Project - React Native "Book app"
+# Capstone Project - React Native "Book app"
 
 ## Youtube demo link: https://youtu.be/JgF3aJcUNxM
 
