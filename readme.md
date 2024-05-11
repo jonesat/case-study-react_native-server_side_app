@@ -9,17 +9,21 @@ This app access the google books and open library API's to allow a user to brows
 Additionally with a server backend there was hope that any searching and collecting done in the "book app" would be able to be restored to any device, but serverside updates were not solved in time, settling for inefficient and overloaded asynchronous storage.
 
 The following is an image showing the main screen of the app after logging in.
+
 ![introMain](images/introMain.png)
 
 From this screen users will search for books and add to a collection that is maintained between sessions but not between devices using the same credentials. See below for someones "book shelf".
+
 ![introShelf](images/introShelf.png)
 
 In this project there was some integration with serverside but it is disappontingly incomplete at the time of submission. User authentication and registration works but insertion and removal of use book watchlists is not complete, mainly due to the complexity of the book objects since they have so many complex/nested fields.
+
 ![introServerSide](images/introServerSide.png)
 
 In the picture above you can see a few different events in the server log.
 The registration of a user called "big dog", their subsequent logging in, there attempts to remove book items from the database, which have a status code 200, but are not functioning correctly.
 Then an attempt to remove an item by an unauthorized user was made which was blocked and several more attempts to insert or remove which are reporting code 200, ok but are all in fact abject failures as the books table is empty see below.
+
 ![introDB](images/introDB.png)
 
 Hashing and salting was added after the first two users were added to the db.
@@ -61,6 +65,7 @@ It does not clear the book watch list which persists between users and sessions.
 
 I did manage to get user authentication and registration on the server side to work.
 I even managed to setup most of the api status codes that go along with it.
+
 ![](images/dbLogin.png)
 
 
@@ -72,6 +77,7 @@ I even managed to setup most of the api status codes that go along with it.
 |500| Database Error|
 
 Then, for registration we have:
+
 ![](images/dbRegister.png)
 
 
